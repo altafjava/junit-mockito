@@ -5,6 +5,6 @@ import org.springframework.stereotype.Repository;
 import com.altaf.model.Item;
 
 @Repository
-public interface ItemRepository extends JpaRepository<Item, String> {
+public interface ItemRepository extends JpaRepository<Item, Integer> {
 
 }

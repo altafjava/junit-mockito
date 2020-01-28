@@ -22,10 +22,10 @@ public class ItemBusinessServiceTest {
 
   @Test
   public void testGetAllItemsFromDB() {
-    Mockito.when(itemRepository.findAll())
-        .thenReturn(Arrays.asList(new Item(1001, "Ball", 10, 20)));
+    Mockito.when(itemRepository.findAll()).thenReturn(Arrays.asList(new Item(1001, "Ball", 10, 20), new Item(1001, "Ball", 10, 15)));
     List<Item> items = itemBusinessService.getAllItemsFromDB();
     assertEquals(200, items.get(0).getValue());
+    assertEquals(150, items.get(1).getValue());
   }
 
 }
